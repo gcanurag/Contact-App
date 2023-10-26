@@ -1,0 +1,31 @@
+ <%-include('components/header')%> 
+    <!-- <% contact.forEach((c)=>{ %>
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Name :<%-c.name %></h5>
+        <p class="card-text">Contact: <%-c.contact%></p>
+        <p class="card-text">Email: <%-c.email%></p>
+        <a href="#" class="btn btn-primary">Edit</a>
+        <a href="#" class="btn btn-danger">Delete</a>
+      </div>
+    </div> -->
+
+
+    <!-- <% }) %> -->
+
+
+
+       <% contact.map((c,i)=>{ %>
+    <div id=<%-c.id %> class="card" style="width: 18rem">
+        <div class="card-body">
+            <h5 class="card-title">Name :<%-c.name %></h5>
+            <p class="card-text">Contact: <%-c.contact%></p>
+            <p class="card-text">Email: <%-c.email%></p>
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a onclick="sayHello()" class="btn btn-danger">Delete</a>
+            <button onclick="sayHello()" >Hello</button>
+        </div>
+    </div> 
+    
+
+    <% }) %>
